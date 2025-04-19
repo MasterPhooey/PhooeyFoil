@@ -108,11 +108,11 @@ SUCCESS_LINE2=Your Switch Shop
 
   **Via curl:**  
   ```
-  curl -u admin:changeme http://10.4.20.204:4223/refresh
+  curl -u admin:changeme http://localhost:4223/refresh
   ```  
   Or explicitly POST:  
   ```
-  curl -u admin:changeme -X POST http://10.4.20.204:4223/refresh
+  curl -u admin:changeme -X POST http://localhost:4223/refresh
   ```
 
 
