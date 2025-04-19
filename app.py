@@ -84,34 +84,12 @@ def serve_sh_tfl():
 @app.route("/refresh", methods=["GET","POST"])
 @requires_auth
 def refresh_catalog():
-    """Protected: manual trigger to regenerate."""
     try:
-        # 1) Explicitly call index.py so we see its wrapper prints
-        print("[refresh] Generating main.json…", flush=True)
-        subprocess.run(
-            ["python3", "index.py"],
-            check=True,
-        )
-        print("index.py completed successfully", flush=True)
-
-        # 2) Then call encrypt.py directly
-        print("[refresh] Encrypting to sh.tfl…", flush=True)
-        subprocess.run(
-            [
-                "python3", "encrypt.py",
-                "--zstd", "-k", "public.key",
-                "-i", os.path.join(OUTPUT_DIR, "main.json"),
-                "-o", os.path.join(OUTPUT_DIR, "sh.tfl"),
-            ],
-            check=True,
-        )
-        print("encrypt.py completed successfully", flush=True)
-
+        print("[refresh] Regenerating catalog…", flush=True)
+        subprocess.run([sys.executable, "shopUp.py"], check=True)
     except CalledProcessError as e:
-        # on error, return JSON error
         return jsonify({"error": str(e)}), 500
 
-    # on success, return JSON success
     return jsonify({"success": "Catalog refreshed successfully"}), 200
 
 if __name__=="__main__":

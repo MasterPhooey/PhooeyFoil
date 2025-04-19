@@ -1,14 +1,9 @@
 #!/bin/sh
 set -e
 
-echo "[entrypoint] Generating main.json…"
-python3 shopUp.py index
-
-echo "[entrypoint] Encrypting to sh.tfl…"
-python3 shopUp.py encrypt --zstd -k public.key \
-    -i data/output/main.json \
-    -o data/output/sh.tfl
+echo "[entrypoint] Regenerating catalog…"
+python3 shopUp.py    # default “all” mode: index + encrypt
 
 echo "[entrypoint] Launching server…"
-# now hand off to whatever CMD was specified (Gunicorn)
+# hand off to CMD (Gunicorn or python3 app.py)
 exec "$@"
