@@ -36,7 +36,7 @@ Tinfoil theme `.zip` files will appear in the Tinfoil options menu.
 ---
 ## Notes:
 
-- **Tinfoil Themes will only work with the NSP installed version of Tinfoil**
+- **Tinfoil Themes will only install with the NSP installed version of Tinfoil**
 - **Roms will only show up if you have Retroarch Installed and Setup**
 ---
 ## Quick Start
