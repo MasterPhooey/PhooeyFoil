@@ -1,0 +1,6 @@
+Flask
+python-dotenv
+paramiko
+pycryptodome
+zstandard
+gunicorn

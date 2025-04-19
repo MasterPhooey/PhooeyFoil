@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  phooeyfoil:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: masterphooey/phooeyfoil:latest
+    env_file:
+      - .env
+    ports:
+      - "4223:4223"
+    # Entrypoint will regenerate on startup, then launch Gunicorn
+    entrypoint: ["./entrypoint.sh"]
+    command:
+      [
+        "gunicorn",
+        "--bind", "0.0.0.0:4223",
+        "app:app",
+        "--workers", "10",
+        "--timeout", "0"
+      ]
+    volumes:
+      # Optional system folders
+      - ./data/switch:/app/data/switch:ro
+      - ./data/n64:/app/data/n64:ro
+      - ./data/dreamcast:/app/data/dreamcast:ro
+      - ./data/psp:/app/data/psp:ro
+      - ./data/gameboy:/app/data/gameboy:ro
+      - ./data/gameboyadvanced:/app/data/gameboyadvanced:ro
+      - ./data/gameboycolor:/app/data/gameboycolor:ro
+      - ./data/nintendo:/app/data/nintendo:ro
+      - ./data/sega32x:/app/data/sega32x:ro
+      - ./data/gamegear:/app/data/gamegear:ro
+      - ./data/segamastersystem:/app/data/segamastersystem:ro
+      - ./data/megadrive:/app/data/megadrive:ro
+      - ./data/supernintendo:/app/data/supernintendo:ro
+      - ./data/gamesaves:/app/data/gamesaves:ro
+      - ./data/themes:/app/data/themes:ro
+
+      # Persist generated JSON & TFL between restarts
+      - phooey_output:/app/data/output
+
+volumes:
+  phooey_output:
