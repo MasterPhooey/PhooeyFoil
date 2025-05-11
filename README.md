@@ -116,11 +116,7 @@ SUCCESS_LINE2=Your Switch Shop
   `GET|POST /refresh`  
   Regenerate `sh.json` and `sh.tfl` on demand (protected by Basic Auth).
 
-  **Via curl:**  
-  ```
-  curl -u admin:changeme http://localhost:4223/refresh
-  ```  
-  Or explicitly POST:  
+  **Via curl:**   
   ```
   curl -u admin:changeme -X POST http://localhost:4223/refresh
   ```
