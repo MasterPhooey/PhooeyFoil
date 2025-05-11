@@ -97,18 +97,24 @@ SUCCESS_LINE2=Your Switch Shop
 - **Encrypted Catalog**  
   `GET /sh.tfl`  
   Download the `sh.tfl` catalog file (protected by Basic Auth).
-
+  
+- **Un-Encrypted Catalog (If Enabled)**
+   `GET /sh.json`  
+  Download the `sh.json` catalog file (protected by Basic Auth)
+  
   **Adding to Tinfoil:**  
   1. Copy the full catalog URL, e.g.:  
-     `http://localhost:4223/sh.tfl`  
-  2. On your Switch, open Tinfoil and go to the **FileBrowser** tab.  
-  3. Select **New** (➖ icon). 
-  4. Enter the catalog URL and login.  
-  5. Tinfoil will load the shop and display available titles.
+     `http://localhost:4223/sh.tfl`
+     or
+     `http://localhost:4223/sh.json` 
+  3. On your Switch, open Tinfoil and go to the **FileBrowser** tab.  
+  4. Select **New** (➖ icon). 
+  5. Enter the catalog URL and login.  
+  6. Tinfoil will load the shop and display available titles.
 
 - **Manual Refresh** (If you dont want to restart your docker)  
   `GET|POST /refresh`  
-  Regenerate `main.json` and `sh.tfl` on demand (protected by Basic Auth).
+  Regenerate `sh.json` and `sh.tfl` on demand (protected by Basic Auth).
 
   **Via curl:**  
   ```
