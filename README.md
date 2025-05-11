@@ -98,8 +98,8 @@ SUCCESS_LINE2=Your Switch Shop
   `GET /sh.tfl`  
   Download the `sh.tfl` catalog file (protected by Basic Auth).
   
-- **Un-Encrypted Catalog (If Enabled)**
-   `GET /sh.json`  
+- **Un-Encrypted Catalog (If Enabled)**  
+  `GET /sh.json`  
   Download the `sh.json` catalog file (protected by Basic Auth)
   
   **Adding to Tinfoil:**  
