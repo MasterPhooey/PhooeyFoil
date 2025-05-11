@@ -20,6 +20,8 @@ else:
     with open(PREFIX_FILE, "w") as f:
         f.write(SYSTEM_URL_PREFIX)
 
+UNENCRYPTED_ENDPOINT = os.getenv("UNENCRYPTED_ENDPOINT", "no").lower() in ("yes", "true", "1")
+
 # ─── Fixed In‑Container Paths ────────────────────────────
 SWITCH_DIR       = "/app/data/switch"
 N64_DIR          = "/app/data/n64"

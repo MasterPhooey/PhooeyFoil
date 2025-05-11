@@ -15,7 +15,7 @@ from config import (
     NINTENDO_DIR, SEGA32X_DIR, GAMEGEAR_DIR,
     SEGAMASTERSYSTEM_DIR, MEGADRIVE_DIR,
     SUPERNINTENDO_DIR, GAMESAVES_DIR,
-    THEMES_DIR, OUTPUT_DIR
+    THEMES_DIR, UNENCRYPTED_ENDPOINT, OUTPUT_DIR
 )
 
 app = Flask(__name__)
@@ -51,10 +51,9 @@ def requires_auth(f):
         return f(*a,**k)
     return wrapped
 
-# 1) Blueprint for all system/theme file routes
 system_bp = Blueprint("system", __name__, url_prefix=f"/{SYSTEM_URL_PREFIX}")
 
-@system_bp.route("/<system>/<path:filename>")
+@system_bp.route("/<system>/<path:filename>", methods=["GET"])
 def serve_system_file(system, filename):
     routes = {
       "Switch": SWITCH_DIR, "N64":N64_DIR, "Dreamcast":DREAMCAST_DIR,
@@ -72,8 +71,7 @@ def serve_system_file(system, filename):
 
 app.register_blueprint(system_bp)
 
-# 2) /sh.tfl (protected, no random prefix)
-@app.route("/sh.tfl")
+@app.route("/sh.tfl", methods=["GET"])
 @requires_auth
 def serve_sh_tfl():
     path = os.path.join(OUTPUT_DIR, "sh.tfl")
@@ -91,6 +89,21 @@ def refresh_catalog():
         return jsonify({"error": str(e)}), 500
 
     return jsonify({"success": "Catalog refreshed successfully"}), 200
+
+if UNENCRYPTED_ENDPOINT:
+    @app.route("/sh.json", methods=["GET"])
+    @requires_auth
+    def serve_sh_json():
+        path = os.path.join(OUTPUT_DIR, "main.json")
+        if not os.path.isfile(path):
+            return jsonify({"error": "main.json not found."}), 404
+        # inline JSON—client sees it as sh.json if desired
+        return send_from_directory(
+            OUTPUT_DIR,
+            "main.json",
+            as_attachment=False,
+            download_name="sh.json"
+        )
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=4223)
