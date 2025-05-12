@@ -89,7 +89,7 @@ SUCCESS_LINE1=Welcome to PhooeyFoil
 # Success message—line 2 (default: Your Switch Shop)
 SUCCESS_LINE2=Your Switch Shop
 
-# Serve the raw JSON at /main.json? (yes no)
+# Serve the raw JSON at /sh.json? (yes no)
 UNENCRYPTED_ENDPOINT=no
 ```
 
