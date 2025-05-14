@@ -9,6 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 2) Copy app code + entrypoint
 COPY . .
 
+# 2a) Ensure the entrypoint is executable
+RUN chmod +x ./entrypoint.sh
+
 # 3) Create data dirs for mounts & output
 RUN mkdir -p \
     data/switch data/n64 data/dreamcast data/psp \
