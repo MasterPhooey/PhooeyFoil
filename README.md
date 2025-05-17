@@ -95,23 +95,28 @@ UNENCRYPTED_ENDPOINT=no
 
 ## Endpoints
 
-- **Encrypted Catalog**  
-  `GET /sh.tfl`  
-  Download the `sh.tfl` catalog file (protected by Basic Auth).
-  
-- **Un-Encrypted Catalog (If Enabled)**  
-  `GET /sh.json`  
-  Download the `sh.json` catalog file (protected by Basic Auth)
-  
-  **Adding to Tinfoil:**  
-  1. Copy the full catalog URL, e.g.:  
-     `http://localhost:4223/sh.tfl`
-     or
-     `http://localhost:4223/sh.json` 
-  3. On your Switch, open Tinfoil and go to the **FileBrowser** tab.  
-  4. Select **New** (➖ icon). 
-  5. Enter the catalog URL and login.  
-  6. Tinfoil will load the shop and display available titles.
+### Encrypted Catalog
+**GET** `/sh.tfl`  
+Download the `sh.tfl` catalog file (protected by Basic Auth).
+
+### Un-Encrypted Catalog (If Enabled)
+**GET** `/sh.json`  
+Download the `sh.json` catalog file (protected by Basic Auth).
+
+### Manual Refresh
+**GET**|**POST** `/refresh`  
+Regenerate both `sh.json` and `sh.tfl` on demand without restarting the service (protected by Basic Auth).
+
+---
+
+### Adding to Tinfoil
+
+1. Copy the full catalog URL, e.g.:  
+   `http://localhost:4223/sh.tfl` or `http://localhost:4223/sh.json`
+2. On your Switch, open Tinfoil and go to the **FileBrowser** tab.
+3. Select **New** (➖ icon).
+4. Enter the catalog URL and login credentials.
+5. Tinfoil will load the shop and display available titles.
 
 ---
 
