@@ -139,10 +139,4 @@ curl -u admin:changeme -X POST http://localhost:4223/refresh
 ```
 
 This allows you to trigger the same update workflow on demand.
-
-Notes
-
-Make sure your Docker container is running and accessible at the defined port (default: 4223).
-The /refresh endpoint is protected by Basic Authentication (admin:changeme by default).
-NsxLibraryManager webhook integration ensures seamless synchronization between the frontend and backend services.
 ---
