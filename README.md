@@ -121,7 +121,7 @@ Regenerate both `sh.json` and `sh.tfl` on demand without restarting the service 
 ---
 # Updating The Catalog
 
-## UltraHand Overlay Catalog Update
+## **UltraHand Overlay** Catalog Update
 
 You can trigger Phooey Foil to update the catalog directly from your Switch using the UltraHand Overlay:
 
@@ -143,7 +143,7 @@ Launch UltraHand Overlay on your Switch and select Update PhooeyFoil Catalog to 
 Note: [Fix Ttle DB] and [Update Title DB] are temp fixes for Tinfoil and Firmware 20.0.1, use them if tinfoil loads titledb slowly
 
 
-## **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** with Webhook Integration
+## **NsxLibraryManager** with Webhook Integration
 
 **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can be used to trigger Phooey Foil to update directly using a webhook.  
 Simply add the webhook URL—using the IP address of your Phooey Foil server in the settings panel as shown below:
