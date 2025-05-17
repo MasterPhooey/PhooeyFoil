@@ -124,7 +124,7 @@ Simply add the webhook URL in the settings panel as shown below:
 
 ![NsxLibraryManager Settings](https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/NLM.png)
 
-Once configured, every time you refresh your library in NsxLibraryManager, Phooey Foil will automatically regenerate the necessary files.
+Once configured, every time you refresh your library in NsxLibraryManager, Phooey Foil will automatically regenerate the index.
 
 ---
 
