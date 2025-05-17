@@ -117,18 +117,18 @@ UNENCRYPTED_ENDPOINT=no
 
 ## Webhook Integration with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
- Refresh PhooeyFoils index with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
+ Refresh PhooeyFoils catalog file with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
 **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can be used to trigger Phooey Foil to update directly using a webhook.  
 Simply add the webhook URL in the settings panel as shown below:
 
 ![NsxLibraryManager Settings](https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/NLM.png)
 
-Once configured, every time you refresh your library in NsxLibraryManager, Phooey Foil will automatically regenerate the index.
+Once configured, every time you refresh your library in NsxLibraryManager, Phooey Foil will automatically regenerate the catalog file.
 
 ---
 
-## 🔄 Manual Refresh
+## Manual Refresh
 
 You can manually trigger a library refresh and regenerate `sh.json` and `sh.tfl` via restarting the docker or a simple GET or POST request (protected by Basic Auth):
 
@@ -137,6 +137,4 @@ You can manually trigger a library refresh and regenerate `sh.json` and `sh.tfl`
 curl -u admin:changeme -X POST http://localhost:4223/refresh
 
 ```
-
-This allows you to trigger the same update workflow on demand.
 ---
