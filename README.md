@@ -131,7 +131,7 @@ https://github.com/MasterPhooey/PhooeyFoil/blob/main/.packages/PhooeyFoil/packag
 2. Edit the `[Update PhooeyFoil Catalog]` section in `package.ini` to point at your Phooey Foil server’s IP:
 ```ini
 [Update PhooeyFoil Catalog]
-download http://admin:changeme@10.4.20.204:4223/refresh /switch/tinfoil/db/dummy.file
+download http://admin:changeme@localhost:4223/refresh /switch/tinfoil/db/dummy.file
 ```
 
 3. Place the modified package.ini in:
