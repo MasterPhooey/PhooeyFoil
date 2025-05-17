@@ -142,9 +142,8 @@ Launch UltraHand Overlay on your Switch and select Update PhooeyFoil Catalog to 
 
 Note: [Fix Ttle DB] and [Update Title DB] are temp fixes for Tinfoil and Firmware 20.0.1, use them if tinfoil loads titledb slowly
 
-## Webhook Integration with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
- Refresh Phooey Foils catalog file with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
+## **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** with Webhook Integration
 
 **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can be used to trigger Phooey Foil to update directly using a webhook.  
 Simply add the webhook URL—using the IP address of your Phooey Foil server in the settings panel as shown below:
