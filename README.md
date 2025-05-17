@@ -119,6 +119,26 @@ Regenerate both `sh.json` and `sh.tfl` on demand without restarting the service 
 5. Tinfoil will load the shop and display available titles.
 
 ---
+# Updating The Catalog
+
+## UltraHand Overlay Catalog Update
+
+You can trigger Phooey Foil to update the catalog directly from your Switch using the UltraHand Overlay:
+
+1. Download the package.ini:
+https://github.com/MasterPhooey/PhooeyFoil/blob/main/.packages/PhooeyFoil/package.ini
+
+2. Edit the `[Update PhooeyFoil Catalog]` section in `package.ini` to point at your Phooey Foil server’s IP:
+```ini
+[Update PhooeyFoil Catalog]
+download http://admin:changeme@10.4.20.204:4223/refresh /switch/tinfoil/db/dummy.file
+```
+
+3. Place the modified package.ini in:
+`/switch/.packages/PhooeyFoil/package.ini`
+
+Launch UltraHand Overlay on your Switch and select Update PhooeyFoil Catalog to regenerate sh.json and sh.tfl on demand—no PC required!
+<p align="center"> <img src="https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/ultrahand.jpg" alt="UltraHand Overlay Settings" width="600" /> </p>
 
 ## Webhook Integration with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
