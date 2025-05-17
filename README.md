@@ -122,10 +122,10 @@ Regenerate both `sh.json` and `sh.tfl` on demand without restarting the service 
 
 ## Webhook Integration with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
- Refresh PhooeyFoils catalog file with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
+ Refresh Phooey Foils catalog file with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
 **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can be used to trigger Phooey Foil to update directly using a webhook.  
-Simply add the webhook URL in the settings panel as shown below:
+Simply add the webhook URL—using the IP address of your Phooey Foil server (e.g. `http://192.168.1.100:4223/refresh`)—in the settings panel as shown below:
 
 ![NsxLibraryManager Settings](https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/NLM.png)
 
