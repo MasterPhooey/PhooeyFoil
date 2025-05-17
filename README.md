@@ -119,7 +119,7 @@ UNENCRYPTED_ENDPOINT=no
 
  Refresh PhooeyFoils index with **[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)**
 
-**[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can now be used to trigger Phooey Foil to update directly using a webhook.  
+**[NsxLibraryManager](https://github.com/ivaano/NsxLibraryManager)** can be used to trigger Phooey Foil to update directly using a webhook.  
 Simply add the webhook URL in the settings panel as shown below:
 
 ![NsxLibraryManager Settings](https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/NLM.png)
