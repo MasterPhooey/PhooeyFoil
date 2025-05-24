@@ -95,17 +95,22 @@ UNENCRYPTED_ENDPOINT=no
 
 ## Endpoints
 
-### Encrypted Catalog
+### Encrypted Catalog  
 **GET** `/sh.tfl`  
 Download the `sh.tfl` catalog file (protected by Basic Auth).
 
-### Un-Encrypted Catalog (If Enabled)
+### Un-Encrypted Catalog (If Enabled)  
 **GET** `/sh.json`  
 Download the `sh.json` catalog file (protected by Basic Auth).
 
-### Manual Refresh
-**GET**|**POST** `/refresh`  
+### Manual Refresh  
+**GET** | **POST** `/refresh`  
 Regenerate both `sh.json` and `sh.tfl` on demand without restarting the service (protected by Basic Auth).
+
+### AIO Zip Download  
+**GET** `/aio`  
+Download `latest.zip` from the output directory. This endpoint is publicly accessible and requires no authentication.  
+Designed for use with [AIO-Switch-Updater](https://github.com/HamletDuFromage/aio-switch-updater).
 
 ---
 
