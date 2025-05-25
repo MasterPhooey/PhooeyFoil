@@ -145,6 +145,7 @@ download http://admin:changeme@localhost:4223/refresh /switch/tinfoil/db/dummy.f
 Launch UltraHand Overlay on your Switch and select Update PhooeyFoil Catalog to regenerate sh.json and sh.tfl on demand—no PC required!
 <p align="center"> <img src="https://raw.githubusercontent.com/MasterPhooey/PhooeyFoil/refs/heads/main/images/ultrahand.jpg" alt="UltraHand Overlay Settings" width="600" /> </p>
 
+Note: [Fix Ttle DB] and [Update Title DB] are temp fixes for Tinfoil and Firmware 20.0.1, use them if tinfoil loads titledb slowly
 
 ## **NsxLibraryManager** Catalog Update
 
