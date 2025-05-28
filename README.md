@@ -120,7 +120,7 @@ Designed for use with [AIO-Switch-Updater](https://github.com/HamletDuFromage/ai
    `http://localhost:4223/sh.tfl` or `http://localhost:4223/sh.json`
 2. On your Switch, open Tinfoil and go to the **FileBrowser** tab.
 3. Select **New** (➖ icon).
-4. Enter the catalog URL and login credentials.
+4. Enter the catalog URL, Path (/sh.tfl or /sh.json) and login credentials.
 5. Tinfoil will load the shop and display available titles.
 
 ---
