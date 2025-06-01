@@ -4,7 +4,7 @@
 
 <h1 align="center">PhooeyFoil</h1>
 
-Phooey Foil is a lightweight backend Tinfoil Shop. Serves Games, RetroArch ROMs, Game Saves and Tinfoil themes.
+Phooey Foil is a lightweight backend Tinfoil Shop. Serves Switch Roms, RetroArch ROMs, Game Saves and Tinfoil themes.
 
 Current Docker image: `masterphooey/phooeyfoil:latest`
 
